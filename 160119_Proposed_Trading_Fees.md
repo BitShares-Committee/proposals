@@ -28,4 +28,3 @@ Expected Outcomes:
 Unortunately, we cannot expect immediate ten-times market activities compared to ten times less order creation fee. However, the restructured fee system can encourage more trading activity and attract more businesses that will bring more users. Consequently, BitShares ecosystem will be expanded.
 
 
-Edit: soft wrap
