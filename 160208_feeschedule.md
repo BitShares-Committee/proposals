@@ -36,7 +36,12 @@ In this proposal, the referral program will receive most of its funds by more ad
 operations, such as *proposals*, *withdraw permissions* as well as *account upgrades*. The
 committee will keep the option to change old (non basic) features and implement new
 features for **LTM-only** for a period of time and offer it to basic members only later.
-This way, we effectivley, upgrade memberships into premium products.
+This way, we effectivley, upgrade memberships into premium products. As more and more
+features being added to LTM, we may increase the account upgrading fee accordingly. In
+this way we encourage power users to upgrade to LTM rather earlier than later. The users
+who have upgraded to LTM before the fee increasing will be happy with that. Occasionally we
+may offer limit-time discounts on account upgrading to advertise new blockchain features.
+It's also important that some fees may be reduced in the long run to keep us competitive.
 
 Additionally, going forward with this fee schedule, we will track the **USD denomination**
 of fees and thus update the schedule if the valuation of BTS changes.
@@ -65,14 +70,8 @@ As soon as BSIP#10 is approved and ready
 ----------------------------------------
 
 * upgrade protocol (hard fork) to include BSIP#10
-* modify committee owned assets to ask for percentage transfer fees
-* start discussion about possible protocol modifications:
-  * protocol upgrade to distinguish fees for bitassets and prediction markets
-  * add committee controlled flags to prevent/allow specific operations
-    to be used by basic members but allowed for premium members (LTM)
-  * add committee controlled flags to include/exclude specific
-    operations from the referral program
-  * add period-dependent fee for withdraw_permission_claim
+* discuss which committee owned assets should implement BSIP10 and what percentage
+  transfer fees to take
 
 6 months after the last fee schedule change
 -------------------------------------------
@@ -87,6 +86,16 @@ Periodically every 12 months after the last change of the fee schedule
   feedback of corresponding businesses and more statistics
 * evaluation of revenue and costs of the DAC and the referral program.
 * optional changes to the fee schedule
+
+Possible protocol modifications requiring more discussion
+---------------------------------------------------------
+* distinguish fees for bitassets and prediction markets
+* add committee controlled flags to prevent/allow specific operations to be used by basic
+  members but allowed for premium members (LTM)
+* add committee controlled over operation-specific fee split between referral program and
+  network
+* add period-dependent fee for withdraw_permission_claim
+* rate-limited 0-fee transactions
 
 Overview
 ========
