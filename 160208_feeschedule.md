@@ -51,17 +51,13 @@ As Soon As Possible
   and improve competitiveness and liquidity.
 * start implementation of BSIP#10 (if approved)
 * start discussions about
-
-    * requiring LTM-ship for specific operations (e.g. asset_create)
-    * removing of specific operations from Referral program (e.g. account_upgrade)
-
+  * requiring LTM-ship for specific operations (e.g. asset_create)
+  * removing of specific operations from Referral program (e.g. account_upgrade)
 * start Implementation for distiction of bitasset fees from prediction
   market fees
 * start Implemenation of methods to improve liquidity
-
-    * either on protocol level (MAKER, DAC as bitasset provider, ...)
-    * improving trading experience (GUI, API)
-
+  * either on protocol level (MAKER, DAC as bitasset provider, ...)
+  * improving trading experience (GUI, API)
 * elaborate the implementation details and consequences of rate-limited but free
   transfers throughout the network
 
@@ -71,7 +67,6 @@ As soon as BSIP#10 is approved and ready
 * upgrade protocol (hard fork) to include BSIP#10
 * modify committee owned assets to ask for percentage transfer fees
 * start discussion about possible protocol modifications:
-
   * protocol upgrade to distinguish fees for bitassets and prediction markets
   * add committee controlled flags to prevent/allow specific operations
     to be used by basic members but allowed for premium members (LTM)
@@ -98,79 +93,79 @@ Overview
 
 Rational for changes to the flat fees now
 
-1.) The transfer of value (any token) is a core functionality of many crypto
-    currencies and business like dwolla and paypal. In order to be competitive,
-    we need a lower over all cost associated with that operation/transaction.
-    Furthermore, the costs associated with that operation are rather low because
-    only account ids, asset ids and an amount are involved. Optional memos can be
-    set a higher fee. The transfer operation is considered a *core* functionality
-    of BitShares and its used should be incentivized. This way, we can
-    even attract more businesses that are looking for micropayment
-    solutions.
+1. The transfer of value (any token) is a core functionality of many crypto
+   currencies and business like dwolla and paypal. In order to be competitive,
+   we need a lower over all cost associated with that operation/transaction.
+   Furthermore, the costs associated with that operation are rather low because
+   only account ids, asset ids and an amount are involved. Optional memos can be
+   set a higher fee. The transfer operation is considered a *core* functionality
+   of BitShares and its used should be incentivized. This way, we can
+   even attract more businesses that are looking for micropayment
+   solutions.
 
-2.) Another *core* functionality and major *value proposition* is the
-    decentralized exchange (DEX) which is associated with a different set of feed.
-    Currently, the fees are flat fees for order creation, cancellation and update,
-    and are independent of the amount actually traded. Hence, small volume orders
-    pay the same fee as large volume orders. Taking a closer look at any
-    competitor reveals that this should certainly chance. Instead of asking for a
-    rather high flat fee to compensate the costs of the DEX (storing and matching
-    orders), I here propose to reduce the flat fee drastically to an amount that
-    mostly to prevents spam and instead set a percentage trading fee for every
-    committee-owned asset. The advantages are that the committee (read: DAC) could
-    earn more fees from matching orders. Since cancellation of orders results in a
-    refund of the creation fee, this should also encourage traders to bring
-    liquidity. A disadvantage is that the DAC earns less from trading of assets
-    that are not owned by the committee, such as OPEN.BTC, TRADE.MUSE etc. because
-    the flat fees are reduced and the percentage market fees go to the
-    corresponding issuer. Anyway, this approach should result in more traders
-    using the DEX and an increase of liquidity.
+2. Another *core* functionality and major *value proposition* is the
+   decentralized exchange (DEX) which is associated with a different set of feed.
+   Currently, the fees are flat fees for order creation, cancellation and update,
+   and are independent of the amount actually traded. Hence, small volume orders
+   pay the same fee as large volume orders. Taking a closer look at any
+   competitor reveals that this should certainly chance. Instead of asking for a
+   rather high flat fee to compensate the costs of the DEX (storing and matching
+   orders), I here propose to reduce the flat fee drastically to an amount that
+   mostly to prevents spam and instead set a percentage trading fee for every
+   committee-owned asset. The advantages are that the committee (read: DAC) could
+   earn more fees from matching orders. Since cancellation of orders results in a
+   refund of the creation fee, this should also encourage traders to bring
+   liquidity. A disadvantage is that the DAC earns less from trading of assets
+   that are not owned by the committee, such as OPEN.BTC, TRADE.MUSE etc. because
+   the flat fees are reduced and the percentage market fees go to the
+   corresponding issuer. Anyway, this approach should result in more traders
+   using the DEX and an increase of liquidity.
 
-    What percentage should be used? Since we are using a fixed percentage
-    independent of an individuals volume, we should choose a percentage that is
-    lower than the highest fee asked for by big exchanges such as Kraken,
-    Coinbase, BTC38, etc. Furthermore, regional difference should be
-    taken into account eventually. For now I propose a fee of
+   What percentage should be used? Since we are using a fixed percentage
+   independent of an individuals volume, we should choose a percentage that is
+   lower than the highest fee asked for by big exchanges such as Kraken,
+   Coinbase, BTC38, etc. Furthermore, regional difference should be
+   taken into account eventually. For now I propose a fee of
 
-                            0.10%
+                           0.10%
 
-    of the matched volume which is less than most centralized competitors even
-    though we offer an increased security over them. This fee may be considered as
-    a welcome package and may probably be increased to something close to 0.5% to
-    reflect the decentralized and trust-free nature of the DEX.
+   of the matched volume which is less than most centralized competitors even
+   though we offer an increased security over them. This fee may be considered as
+   a welcome package and may probably be increased to something close to 0.5% to
+   reflect the decentralized and trust-free nature of the DEX.
 
-3.) Now that we have reduced the fees for our two core functionalities, how can we
-    rescue the referral program that pays the registrar/affiliate a fraction of
-    the payed fee from referrers? The transfer and trading fees certainly don't
-    motive business to bring in more users if they don't get paid!
+3. Now that we have reduced the fees for our two core functionalities, how can we
+   rescue the referral program that pays the registrar/affiliate a fraction of
+   the payed fee from referrers? The transfer and trading fees certainly don't
+   motive business to bring in more users if they don't get paid!
 
-    The solution is rather simple: The above mentioned transfer and trade
-    operations are only two out of many operations that can be used by customers
-    to make full use of BitShares. There is also the creation of assets,
-    withdrawal permissions as well as worker, committee member creation and
-    proposals. These fees can be used to let the referral program benefit from
-    customers.
+   The solution is rather simple: The above mentioned transfer and trade
+   operations are only two out of many operations that can be used by customers
+   to make full use of BitShares. There is also the creation of assets,
+   withdrawal permissions as well as worker, committee member creation and
+   proposals. These fees can be used to let the referral program benefit from
+   customers.
 
-    So, we distinguish power users from regular users. Power users should be
-    encouraged to upgrade their account to a life-time membership (or annual
-    membership) to reduce their fees by 80% (receive cashback). The regular users
-    rarely creates new assets and uses it frequently, as well as use more advanced
-    features of the network, but if he does, we can ask for a comparably high fee
-    since there are only few competitors with these functionalities, if at all.
-    A power users that wants to see constantly reduced fees and benefit from
-    cheaper advanced features should be asked to pay a higher fee to upgrade his
-    account.
+   So, we distinguish power users from regular users. Power users should be
+   encouraged to upgrade their account to a life-time membership (or annual
+   membership) to reduce their fees by 80% (receive cashback). The regular users
+   rarely creates new assets and uses it frequently, as well as use more advanced
+   features of the network, but if he does, we can ask for a comparably high fee
+   since there are only few competitors with these functionalities, if at all.
+   A power users that wants to see constantly reduced fees and benefit from
+   cheaper advanced features should be asked to pay a higher fee to upgrade his
+   account.
 
 In short: The referral program should only receive minor benefit from the core
 value proposition (transfers and trades) of the DEX but instead make
 its profit from the advanced features of the network, such as:
 
-    * memberships for reduced fees
-    * individual assets
-    * withdrawal permissions
-    * proposals
-    * prediction market
-    * among others
+* memberships for reduced fees
+* individual assets
+* withdrawal permissions
+* proposals
+* prediction market
+* among others
 
 Important factors:
 ------------------
@@ -198,16 +193,16 @@ Important factors:
   running on top of BitShares as far as possible. We need them! Hence, we should
   talk to:
 
-      * OpenLedger
-      * metaexchange
-      * bitcash
-      * transwiser
-      * freebie
-      * bunkerchainlabs
-      * peermit
-      * blocktrades.us
-      * BitShares POS
-      * OnceUponATime (STEALTH)
+  * OpenLedger
+  * metaexchange
+  * bitcash
+  * transwiser
+  * freebie
+  * bunkerchainlabs
+  * peermit
+  * blocktrades.us
+  * BitShares POS
+  * OnceUponATime (STEALTH)
 
   Centralized exchanges are not part of this list since they mainly benefit from
   reduced transfer fees and don't run a business *whithin* BitShares (i.e. no
