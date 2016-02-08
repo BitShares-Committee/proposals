@@ -1,7 +1,8 @@
 Shareholder Summary
 ===================
 
-Thanks to some keen external developers we are soon to see what is referred to as BSIP#10
+Thanks to some keen external developers we are soon to see what is referred to as 
+[BSIP#10](https://github.com/bitshares/bsips/blob/master/bsip-0010.md)
 and will allow percentage based transfer fees and give the BitShares ecosystem some needed
 flexibility to distinguish between different cultures. Another idea that came up recently,
 was the limitation of transfers by rate and offering it for free to get an unfair
@@ -10,8 +11,8 @@ by other operations, such as trading. However, the development is quite intensiv
 take some more weeks to complete.
 
 To resolve the highly discussed fee issue of many shareholders, the BitShares community
-and most of the existing businesses, the committee members have decided to step up and act
-now with the option for modifications once BSIP#10 is available.
+and most of the existing businesses, some committee members have decided to step up and 
+act now with the option for modifications once BSIP#10 is available.
 
 After several days of intensive discussion, we've constructed a whole new fee schedule for
 the BitShares ecosystem that has **drastically reduces** the fees required for the **core
@@ -20,7 +21,7 @@ operations. By this, we keep the referral program attractive and can attract mor
 customers as we become more competitive with other service providers for these features,
 but have them at one place.
 
-Even though this fee schedule has had a lot of thoughts, we we will have more options once
+Even though this fee schedule has had a lot of thoughts, we will have more options once
 BSIP#10 or the rate-limited free transfer is available to be implemented for bitassets
 owned by the committee. In the mean time, however, we would like to give everyone the
 opportunity to make use of a low flat fee for all transfers with in the network and have
@@ -36,7 +37,7 @@ In this proposal, the referral program will receive most of its funds by more ad
 operations, such as *proposals*, *withdraw permissions* as well as *account upgrades*. The
 committee will keep the option to change old (non basic) features and implement new
 features for **LTM-only** for a period of time and offer it to basic members only later.
-This way, we effectivley, upgrade memberships into premium products.
+This way, we effectively, upgrade memberships into premium products.
 
 Additionally, going forward with this fee schedule, we will track the **USD denomination**
 of fees and thus update the schedule if the valuation of BTS changes.
@@ -52,7 +53,7 @@ As Soon As Possible
 * start implementation of BSIP#10 (if approved)
 * start discussions about
   * requiring LTM-ship for specific operations (e.g. asset_create)
-  * offering a feature to change default split % (referral program/network) of specific operations
+  * removing of specific operations from Referral program (e.g. account_upgrade)
 * start Implementation for distiction of bitasset fees from prediction
   market fees
 * start Implemenation of methods to improve liquidity
@@ -65,7 +66,7 @@ As soon as BSIP#10 is approved and ready
 ----------------------------------------
 
 * upgrade protocol (hard fork) to include BSIP#10
-* modify committee owned assets to ask for percentage transfer fees
+* start discussion about modifying committee owned assets to ask for percentage transfer fees
 * start discussion about possible protocol modifications:
   * protocol upgrade to distinguish fees for bitassets and prediction markets
   * add committee controlled flags to prevent/allow specific operations
@@ -99,9 +100,8 @@ Rational for changes to the flat fees now
    Furthermore, the costs associated with that operation are rather low because
    only account ids, asset ids and an amount are involved. Optional memos can be
    set a higher fee. The transfer operation is considered a *core* functionality
-   of BitShares and its used should be incentivized. This way, we can
-   even attract more businesses that are looking for micropayment
-   solutions.
+   of BitShares and uses of it should be incentivized. This way, we can
+   even attract more businesses that are looking for micropayment solutions.
 
 2. Another *core* functionality and major *value proposition* is the
    decentralized exchange (DEX) which is associated with a different set of feed.
@@ -170,7 +170,7 @@ its profit from the advanced features of the network, such as:
 Important factors:
 ------------------
 
-- All flat fees here are basic member fees. For LTM, most fees get cur
+- All flat fees here are basic member fees. For LTM, most fees get cut
   by 80%
 
 - The flat fees below are denoted in USD even though the network asks for fees
