@@ -224,16 +224,24 @@ decentralized trading, the fees could potentially be raised slightly.
 High Level Overview of changes:
 -------------------------------
 
-   * `fee` is a flat price that has to be paid per operation
-   * `price_per_kbyte` is a fee that has to be paid per kilobyte of transaction size
-     (i.e. longer memos cost more than shorter memos)
-   * `account_create` distinguishes `premium_fee` names (expensive) from `basic_fee`
-     names (cheap)
-   * `account_upgrade` distinguishes between a annual subscription and a life time
-     subscription
-   * `asset_create` distinguishes between the number of characters of the symbol (i.e.
-     short symbols are very expensive, longer ones are cheap)
-   * blind transfers have to pay per output.
+The scripts used to track the USD fee are [publicly
+auditable](https://github.com/BitShares-Committee/Instructions/tree/master/usd-denominated-fees).
+A detailed descriptipon about every single operation and it's associated
+fee is available under
+[github](https://github.com/BitShares-Committee/Instructions/blob/master/usd-denominated-fees/fee-schedule-proposed-by-xeroc.py).
+
+### Fee Types:
+
+* `fee` is a flat price that has to be paid per operation
+* `price_per_kbyte` is a fee that has to be paid per kilobyte of transaction size
+  (i.e. longer memos cost more than shorter memos)
+* `account_create` distinguishes `premium_fee` names (expensive) from `basic_fee`
+  names (cheap)
+* `account_upgrade` distinguishes between a annual subscription and a life time
+  subscription
+* `asset_create` distinguishes between the number of characters of the symbol (i.e.
+  short symbols are very expensive, longer ones are cheap)
+* blind transfers have to pay per output.
 
 ```
         price_per_kbyte price for                                  transfer differs by    0.133x (network:    0.0754 USD / proposal:    0.0100 USD)
