@@ -10,8 +10,8 @@ by other operations, such as trading. However, the development is quite intensiv
 take some more weeks to complete.
 
 To resolve the highly discussed fee issue of many shareholders, the BitShares community
-and most of the existing businesses, the committee has decided to step up and act now with
-the option for modifications once BSIP#10 is available.
+and most of the existing businesses, the committee members have decided to step up and act
+now with the option for modifications once BSIP#10 is available.
 
 After several days of intensive discussion, we've constructed a whole new fee schedule for
 the BitShares ecosystem that has **drastically reduces** the fees required for the **core
