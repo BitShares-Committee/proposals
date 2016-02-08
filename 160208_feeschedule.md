@@ -52,7 +52,7 @@ As Soon As Possible
 * start implementation of BSIP#10 (if approved)
 * start discussions about
   * requiring LTM-ship for specific operations (e.g. asset_create)
-  * removing of specific operations from Referral program (e.g. account_upgrade)
+  * offering a feature to change default split % (referral program/network) of specific operations
 * start Implementation for distiction of bitasset fees from prediction
   market fees
 * start Implemenation of methods to improve liquidity
